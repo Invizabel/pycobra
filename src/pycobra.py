@@ -1,5 +1,6 @@
 import argparse
 import ftplib
+import socket
 import urllib.request
 from clear import clear
 
@@ -17,6 +18,9 @@ def pycobra():
     methods = ["CONNECT", "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT", "TRACE"]
 
     print(f"{CYAN}checking: {args.host}")
+
+    dns = socket.getfqdn(args.host)
+    hits.append(dns)
 
     try:
         ftp_client = ftplib.FTP(args.host, timeout = 10)

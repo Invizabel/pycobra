@@ -1,1 +1,1 @@
-﻿# TheSilent is an active dns enumeration tool!
+﻿# pycobra community edition is a basic vulnerabilty scanner!
